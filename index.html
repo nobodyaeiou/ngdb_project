@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css" />
+
+		<title>Tree Management</title>
+	</head>
+	<body>
+		<section>
+			<div class="form-box">
+				<div class="form-value">
+					<form action="" method="post">
+						<h2>Welcome, {{ name }}</h2>
+						<div class="inputbox">
+							<input type="text" name="rid" required>
+							<label for="">Road ID</label>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="tid" required>
+							<label for="">Tree ID</label>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="tname" required>
+							<label for="">Tree Name</label>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="sharea" required>
+							<label for="">Shadow Area</label>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="lid" required>
+							<label for="">Lamp ID</label>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="larea" required>
+							<label for="">Lighting Area</label>
+						</div>
+						<button type="submit" formaction="http://localhost:5000/add">Add</button>
+					</form>
+					<form action="" method="post">
+						<button type="submit" formaction="http://localhost:5000/view">View</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+

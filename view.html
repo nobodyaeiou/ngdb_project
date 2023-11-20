@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css" />
+		<title>Tree Management</title>
+		<style>
+			h2 {
+				position: center;
+				font-size: 3em;
+				color:#ab4646;
+				top: 10px;
+				left: 150px;
+			}
+
+			.form-box{
+				position: relative;
+				width: 1200px;
+				height: 700px;
+				background: transparent;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+				border-radius: 20px;
+				backdrop-filter: blur(15px);
+				display: flex;
+				justify-content: left;
+				align-items: left;
+				top: 10px;
+				column-count: 3;
+				column-fill: auto;
+				flex-direction: column;
+				flex-wrap: wrap;
+				height: 700;
+			}
+
+			.form_value {
+				position: absolute;
+				top: 50px;
+				left: 100px;
+				align-items: left;
+				background: transparent;
+				font-size: 20px;
+				color: #aa1f1f;
+				height: 700px;
+				width: 1000px;
+				column-count: 3;
+				overflow-x: scroll;
+				column-gap: 120px;
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+			}
+
+			::-webkit-scrollbar-track {
+				box-shadow: inset 0 0 10px grey;
+				border-radius: 10px;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: #fff;
+				border-radius: 10px;
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: rgba(255, 255, 255, 0.5);
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<section>
+			<div class="form-box">
+				<h2>Tree Management</h2>
+				<div class="form_value">
+					<ul>
+						{% for item in data %}
+								<li>rid = {{item.rid}}</li>
+								<li>tid = {{item.tid}}</li>
+								<li>tname = {{item.tname}}</li>
+								<li>sharea = {{item.sharea}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+
